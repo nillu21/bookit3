@@ -1,29 +1,31 @@
 package ee.taltech.spring.bookit.domain;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity
-public class User {
+public class User implements Serializable {
 
     @Id
-    @GeneratedValue
-    private String id;
+    private Long id;
     private String name;
     private Integer age;
 
-    public User(String id, String name, Integer age) {
+    public User(Long id, String name, Integer age) {
         this.id = id;
         this.name = name;
         this.age = age;
     }
 
-    public String getId() {
+    public User() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
