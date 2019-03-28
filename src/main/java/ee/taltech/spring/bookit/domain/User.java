@@ -1,12 +1,9 @@
 package ee.taltech.spring.bookit.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class User {
 
     @Id
