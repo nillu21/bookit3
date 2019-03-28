@@ -1,22 +1,18 @@
 package ee.taltech.spring.bookit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.io.Serializable;
 
 @Entity
-public class User implements Serializable {
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+public class User {
 
     @Id
     private Long id;
     private String name;
     private Integer age;
-
-    public User(Long id, String name, Integer age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
 
     public User() {
     }
@@ -43,5 +39,14 @@ public class User implements Serializable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
