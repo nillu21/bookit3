@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Controller
 @RequestMapping("todos")
@@ -22,5 +23,12 @@ public class TodosController {
         Todo todo = todosService.getTodo(id);
         model.addAttribute("example_todo", todo);
         return "todos";
+    }
+
+    @GetMapping()
+    public String getAllTodos(Model model) {
+        List<Todo> allTodos = todosService.findAllTodos();
+        model.addAttribute("todos", allTodos);
+        return "todo-list";
     }
 }
