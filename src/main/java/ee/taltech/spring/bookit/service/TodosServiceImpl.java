@@ -5,6 +5,7 @@ import ee.taltech.spring.bookit.repository.TodosRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class TodosServiceImpl implements TodosService {
@@ -15,5 +16,10 @@ public class TodosServiceImpl implements TodosService {
     @Override
     public Todo getTodo(Long id) {
         return todosRepository.getOne(id);
+    }
+
+    @Override
+    public List<Todo> findAllTodos() {
+        return todosRepository.findAll();
     }
 }

@@ -7,3 +7,7 @@ CREATE TABLE todos (
 
 insert into todos (name, description) values ( 'jooksma', '10 km');
 insert into todos (name, description) values ( 'kodutoo', 'Tehisintellekt');
+insert into todos (name, description) values ( 'kodutoo2', 'asdasd');
+insert into todos (name, description) values ( 'Noud', 'pese neid');
+insert into todos (name, description) values ( 'Tangi', 'oma auto');
+insert into todos (name, description) values ( 'korista', 'tuba');
