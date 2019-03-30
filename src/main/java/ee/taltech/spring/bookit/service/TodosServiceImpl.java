@@ -27,4 +27,9 @@ public class TodosServiceImpl implements TodosService {
     public Todo addTodo(Todo todo) {
         return todosRepository.save(todo);
     }
+
+    @Override
+    public void saveAll(List<Todo> todos) {
+        todosRepository.saveAll(todos);
+    }
 }
