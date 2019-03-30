@@ -5,7 +5,7 @@ CREATE TABLE todos (
     done boolean default false
 );
 
-insert into todos (name, description) values ( 'jooksma', '10 km');
+insert into todos (name, description) values ( 'poome ilja üles', 'kümme korda');
 insert into todos (name, description) values ( 'kodutoo', 'Tehisintellekt');
 insert into todos (name, description) values ( 'kodutoo2', 'asdasd');
 insert into todos (name, description) values ( 'Noud', 'pese neid');
