@@ -30,9 +30,15 @@ public class TodosController {
         return "todo-list";
     }
 
-    @PostMapping()
-    public @ResponseBody Todo addTodo(@RequestBody Todo todo) {
+    @PostMapping("form")
+    public @ResponseBody Todo addTodo(@ModelAttribute Todo todo) {
         Todo result = todosService.addTodo(todo);
         return result;
+    }
+
+    @GetMapping("form")
+    public String getForm(Model model) {
+        model.addAttribute("todo", new Todo());
+        return "form";
     }
 }
