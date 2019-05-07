@@ -1,5 +1,5 @@
 # bookit
-
+The base set-up of the applicationi is gotten from a group project I did 2 months ago.
 ## Requirements
   - java 11
   - IntelliJ Ultimate
